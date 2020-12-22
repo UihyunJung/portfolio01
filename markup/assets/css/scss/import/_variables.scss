@@ -1,0 +1,55 @@
+@charset "UTF-8";
+
+// =======================================
+// Font Settings
+// =======================================
+
+// rem 단위 계산을 위한 html 사이즈 리셋
+$html-fz: 10px;
+
+// 본문(paragraph) 사이즈
+$body-fz: 16px;
+
+// 본문(paragraph) 기본 컬러
+$base-color: #fff;
+
+// 기본 행간 비율
+$line-height: 1.4;
+
+// 본문 행간 비율
+$base-line: $body-fz * 1.4;
+
+// 적용 웹 폰트
+$font-family-ko: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+$font-family-en: 'Josefin Sans', 'Noto Sans KR', sans-serif;
+
+// vw 계산용 기준 viewport 사이즈
+$vw-viewport: 720 !default;
+
+// color
+$bg-color: #222;
+$bg-sub-color: #292929;
+$main-color: #fff;
+$txt-color: #8c8c8c;
+$point-color: #20c997;
+
+// 영역 채우기
+@mixin clearfix($extend: true) {
+    // 미디어쿼리 내부 사용 시 $extend: false 사용
+    @if $extend {
+        @extend %clearfix;
+    }
+    @else {
+        *zoom: 1;
+        &:before, &:after {
+            content: "";
+            display: block;
+        }
+        &:after {
+            clear: both;
+        }
+    }
+}
+%clearfix {
+  @include clearfix($extend: false);
+}
