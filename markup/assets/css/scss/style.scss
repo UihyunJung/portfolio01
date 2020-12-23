@@ -84,13 +84,14 @@ header{
     }
     h1{
         > a{
-            > img{
-                transition: all ease 0.3s;
-            }
+            display:inline-block;
+            width:35px;
+            height:35px;
+            background:url("/assets/img/icon_home.svg") no-repeat;
+            background-size: cover;
+            margin-top:8px;
             &:hover{
-                > img{
-                    transform: scale(1.1);
-                }
+                background-image:url("/assets/img/icon_home_hover.svg");
             }
         }
     }
@@ -536,6 +537,89 @@ header{
             font-weight: 300;
             color:$txt-color;
             margin-top:5px;
+        }
+    }
+}
+
+.contact-home{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    > li{
+        padding-left:35px;
+        font-size: 20px;
+        background-repeat:no-repeat;
+        background-position:left top;
+        background-size:24px 24px;
+        &.address{
+            background-image:url("/assets/img/icon_pin.svg");
+        }
+        &.phone{
+            background-image:url("/assets/img/icon_phone.svg");
+        }
+        &.email{
+            background-image:url("/assets/img/icon_mail.svg");
+        }
+        &.website{
+            background-image:url("/assets/img/icon_home_hover.svg");
+        }
+        > p{
+            font-size: 20px;
+            font-weight: 300;
+            color:$point-color;
+        }
+    }
+}
+
+footer{
+    padding:50px 0;
+    .sns-list{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:30px;
+        > li{
+            & + li{
+                margin-left:30px;
+            }
+            > a{
+                display:block;
+                width:40px;
+                height:40px;
+                background-repeat:no-repeat;
+                background-size:cover;
+                &.github{
+                    background-image:url("/assets/img/icon_github.svg");
+                }
+                &.linkedin{
+                    background-image:url("/assets/img/icon_linkedin.svg");
+                }
+                &.insta{
+                    background-image:url("/assets/img/icon_insta.svg");
+                }
+                &:hover{
+                    &.github{
+                        background-image:url("/assets/img/icon_github_hover.svg");
+                    }
+                    &.linkedin{
+                        background-image:url("/assets/img/icon_linkedin_hover.svg");
+                    }
+                    &.insta{
+                        background-image:url("/assets/img/icon_insta_hover.svg");
+                    }
+                }
+            }
+        }
+    }
+    p{
+        font-size: 24px;
+        font-weight: 300;
+        text-align: center;
+        &.notice{
+            font-size: 14px;
+            font-weight: 300;
+            color:$txt-color;
+            margin-top:10px;
         }
     }
 }
