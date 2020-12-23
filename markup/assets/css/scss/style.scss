@@ -53,7 +53,7 @@ html, body{
         text-align: center;
         background: $bg-color url("/assets/img/up_arrow.svg") center 18% no-repeat;
         background-size: 80% 40%;
-        &:hover{
+        &:hover, &:active{
             border-color:$point-color;
             color:$point-color;
             background-image:url("/assets/img/up_arrow_hover.svg");
@@ -95,7 +95,7 @@ header{
             background:url("/assets/img/icon_home.svg") no-repeat;
             background-size: cover;
             margin-top:rem(8px);
-            &:hover{
+            &:hover, &:active{
                 background-image:url("/assets/img/icon_home_hover.svg");
             }
         }
@@ -127,7 +127,7 @@ header{
                         opacity: 0;
                         transition:all ease 0.3s;
                     }
-                    &:hover{
+                    &:hover, &:active{
                         color:$point-color;
                         &::after{
                             width:100%;
@@ -176,7 +176,7 @@ header{
                 background-color:$main-color;
                 transition:all ease 0.3s;
             }
-            &:hover{
+            &:hover, &:active{
                 > i{
                     background-color:$point-color;
                 }
@@ -202,7 +202,7 @@ header{
                     top:50%;
                     transform:translateY(-50%) rotate(45deg);
                 }
-                &:hover{
+                &:hover, &:active{
                     transform:rotate(90deg);
                     &::before{
                         background-color:$point-color;
@@ -316,7 +316,7 @@ section{
             background-size:cover;
             animation: .8s ease-in infinite alternate scrollDown;
         }
-        &:hover{
+        &:hover, &:active{
             color:$point-color;
             &::after{
                 background-image:url("/assets/img/down_arrow_hover.svg");
@@ -556,7 +556,7 @@ section{
                 transition: all ease .5s;
             }
         }
-        &:hover{
+        &:hover, &:active{
             .img-wrap{
                 > img{
                     filter: grayscale(0%);
@@ -644,7 +644,7 @@ footer{
                 &.insta{
                     background-image:url("/assets/img/icon_insta.svg");
                 }
-                &:hover{
+                &:hover, &:active{
                     &.github{
                         background-image:url("/assets/img/icon_github_hover.svg");
                     }
@@ -751,7 +751,7 @@ footer{
         z-index:-1;
         transform: translateX(-100%);
     }
-    &:hover {
+    &:hover, &:active {
         color: $main-color;
         &::before { transform: translateX(0); }
     }
