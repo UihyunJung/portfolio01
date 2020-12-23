@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+<!--#include file="./include/_head.html"-->
+</head>
+<body>
+    <div class="wrap">
+        <!--#include file="./include/_header.html"-->
+        <section class="visual sub">
+            <div class="bg bg04"></div>
+            <h2><strong>Contact</strong><br>언제든지 연락주세요</h2>
+        </section>
+
+        <section class="contents">
+            <div class="inner">
+                <ul class="contact-home">
+                    <li class="address">Address <p>서울시 양천구 신정동</p></li>
+                    <li class="phone">Cell Phone <p>+82-10-4477-4739</p></li>
+                    <li class="email">E-mail <p>uihyun.jung@gmail.com</p></li>
+                    <li class="website">Web Site <p>www.nooroong.com</p></li>
+                </ul>
+                <form action="http://lptncl.dothome.co.kr/mail.php" method="POST">
+                    <div class="mail-form">
+                        <div class="left">
+                            <label for="name">Your Name</label>
+                            <input type="text" name="name" id="name" placeholder="이름을 입력해주세요.">
+                            <label for="email">Your E-mail</label>
+                            <input type="text" name="email" id="email" placeholder="이메일 주소를 입력해주세요.">
+                            <label for="subject">Subject</label>
+                            <input type="text" name="subject" id="subject" placeholder="제목을 입력해주세요.">
+                        </div>
+                        <div class="right">
+                            <label for="message">Message</label>
+                            <textarea name="message" id="message" cols="30" rows="10" placeholder="내용을 입력해주세요."></textarea>
+                        </div>
+                    </div>
+                    <div class="btn-wrap center">
+                        <button class="btn">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <!--#include file="./include/_footer.html"-->
+        <button class="btn-top">top</button>
+    </div>
+</body>
+</html>
