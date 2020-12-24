@@ -49,6 +49,7 @@ $(document).ready(function(){
         });
     });
 
+    // home에 skill 아이콘 호버시 text 표시
     $(".logo-list > li").hover(
         function(){
             $(this).find("span").removeClass("hidden").addClass("show");

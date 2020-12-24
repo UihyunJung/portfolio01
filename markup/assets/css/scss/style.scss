@@ -43,16 +43,16 @@ html, body{
         position:fixed;
         bottom:rem(50px);
         right:rem(50px);
-        width:rem(50px);
-        height:rem(50px);
+        width:rem(40px);
+        height:rem(40px);
         border:1px solid $main-color;
         font-size: rem(18px);
         font-weight: 300;
         color:$main-color;
         padding-top:rem(18px);
         text-align: center;
-        background: $bg-color url("/assets/img/up_arrow.svg") center 18% no-repeat;
-        background-size: 80% 40%;
+        background: $bg-color url("/assets/img/up_arrow.svg") center center no-repeat;
+        background-size: 90% 50%;
         &:hover, &:active{
             border-color:$point-color;
             color:$point-color;
@@ -88,13 +88,13 @@ header{
         height:100%;
     }
     h1{
+        height:rem(30px);
         > a{
             display:inline-block;
             width:rem(30px);
             height:rem(30px);
-            background:url("/assets/img/icon_home.svg") no-repeat;
+            background:url("/assets/img/icon_home.svg") center center no-repeat;
             background-size: cover;
-            margin-top:rem(8px);
             &:hover, &:active{
                 background-image:url("/assets/img/icon_home_hover.svg");
             }
@@ -231,18 +231,19 @@ section{
         bottom:0;
         left:0;
         right:0;
-        background:url("/assets/img/bg_visual.jpg") no-repeat;
+        background:url("/assets/img/bg_visual.jpg") center center no-repeat;
         background-size:cover;
-        opacity:0.08;
+        opacity:0.06;
     }
     &.sub{
         height:rem(500px);
         min-height:auto;
         > .bg{
             background-attachment:fixed;
+            opacity:0.08;
         }
         > .bg01{
-            background-image:url("/assets/img/bg01.jpg");
+            background-image:url("/assets/img/bg04.jpg");
         }
         > .bg02{
             background-image:url("/assets/img/bg02.jpg");
@@ -329,6 +330,9 @@ section{
     &.colored{
         background-color:$bg-sub-color;
     }
+    &:nth-child(2n){
+        background-color:$bg-sub-color;
+    }
     .inner{
         padding:rem(100px 0);
     }
@@ -343,6 +347,19 @@ section{
             font-weight: 700;
             color:$main-color;
             text-transform: uppercase;
+        }
+    }
+    h3{
+        text-align: center;
+        font-size: rem(18px);
+        font-weight: 300;
+        color: $txt-color;
+        margin-bottom:rem(60px);
+        line-height:1.6em;
+        > strong{
+            font-size: rem(36px);
+            font-weight: 700;
+            color:$main-color;
         }
     }
 }
@@ -408,11 +425,13 @@ section{
                 height:rem(60px);
                 vertical-align: top;
                 background-repeat: no-repeat;
+                background-position:center center;
                 background-size:cover;
                 background-color: #444;
                 border-radius: rem(10px);
-                & + li{
-                    margin-left:rem(20px);
+                margin-right:rem(20px);
+                &:last-child{
+                    margin-right:0;
                 }
                 &.html{
                     background-image:url("/assets/img/logo_html5.png");
@@ -533,7 +552,7 @@ section{
     }
 }
 
-.gallery{
+.work-list{
     font-size: 0;
     margin-top:rem(-60px);
     > li{
@@ -551,6 +570,7 @@ section{
             overflow: hidden;
             border-radius: rem(20px);
             > img{
+                display:block;
                 width:100%;
                 filter: grayscale(100%);
                 transition: all ease .5s;
@@ -583,6 +603,71 @@ section{
             font-weight: 300;
             color:$txt-color;
             margin-top:rem(5px);
+        }
+    }
+}
+
+.port-list{
+    margin-top:rem(-50px);
+    > .port-item{
+        width:calc((100% - 60px) / 3);
+        margin-bottom:rem(30px);
+        margin-top:rem(50px);
+        text-align: center;
+        .img-wrap{
+            overflow: hidden;
+            border-radius: rem(20px);
+            > img{
+                display:block;
+                width:100%;
+                transition: all ease .5s;
+            }
+        }
+        &:hover, &:active{
+            .img-wrap{
+                > img{
+                    transform: scale(1.1);
+                }
+            }
+            .title{
+                color:$point-color;
+            }
+        }
+        .category{
+            font-size: rem(20px);
+            font-weight: 300;
+            color:$point-color;
+            margin-top:rem(10px);
+        }
+        .title{
+            font-size: rem(22px);
+            font-weight: 700;
+            margin-top:rem(5px);
+        }
+        .term{
+            font-size: rem(20px);
+            font-weight: 300;
+            color:$txt-color;
+            margin-top:rem(5px);
+        }
+    }
+}
+
+.grid{
+    position:relative;
+    .grid-sizer{
+        width:calc((100% - 6rem) / 3);
+    }
+    .grid-item{
+        width:calc((100% - 6rem) / 3);
+        padding:0 15px;
+        margin-bottom:rem(30px);
+        text-align: center;
+        img{
+            display:block;
+            width:100%;
+            transition: all ease .5s;
+            border-radius: rem(20px);
         }
     }
 }
@@ -634,6 +719,7 @@ footer{
                 width:rem(40px);
                 height:rem(40px);
                 background-repeat:no-repeat;
+                background-position: center center;
                 background-size:cover;
                 &.github{
                     background-image:url("/assets/img/icon_github.svg");

@@ -73,7 +73,7 @@ async function images() {
 
 // Optimize Images
 async function optImg() {
-  return src(paths.img.src)
+  return src([paths.img.src, "./markup/assets/img/**/*.svg"])
     .pipe(imagemin())
     .pipe(dest(paths.img.dest))
 }
@@ -223,7 +223,7 @@ async function updateAssets() {
 // define complex tasks
 const revAll = series(revCss, updateCss, revAssets, updateAssets);
 const web = parallel(fonts, images, scss, csscopy, scripts, htmlssi);
-const build = series(clean, web);
+const build = series(clean, web, optImg);
 const buildRev = series(clean, web, revAll);
 
 // export tasks

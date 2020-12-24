@@ -13,11 +13,91 @@
 
         <section class="contents">
             <div class="inner">
-                <h3>Work Experience</h3>
+                <h3><strong>Work Experience</strong></h3>
+                <!-- <div class="grid">
+                    <div class="grid-sizer"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_tworld_new.jpg" alt="SKT T world"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_mitsubishi.jpg" alt="SKT T world"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_uplus.jpg" alt="SKT T world"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_sinhyup.jpg" alt="SKT T world"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_ppap.jpg" alt="SKT T world"></div>
+                    <div class="grid-item"><img src="/assets/img/port/port_skt.jpg" alt="SKT T world"></div>
+                </div> -->
+                <div class="port-list">
+                    <div class="port-item">
+                        <a href="https://play.google.com/store/apps/details?id=com.sktelecom.minit" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_tworld_new.jpg" alt="SKT T world">
+                            </div>
+                            <p class="category">#mobile</p>
+                            <p class="title">SKT T world 리뉴얼</p>
+                            <p class="term">2020.08 ~ 2020.10</p>
+                        </a>
+                    </div>
+                    <div class="port-item">
+                        <a href="https://play.google.com/store/apps/details?id=com.medialog.umobi.prepayment.customerservice" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_mitsubishi.jpg" alt="U+ 알뜰모바일 선불충전앱">
+                            </div>
+                            <p class="category">#mobile</p>
+                            <p class="title">U+ 알뜰모바일 선불충전앱</p>
+                            <p class="term">2020.02 ~ 2020.04</p>
+                        </a>
+                    </div>
+                    <div class="port-item">
+                        <a href="https://www.purunet-ischool.co.kr/main.ks" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_uplus.jpg" alt="푸르넷">
+                            </div>
+                            <p class="category">#pc #mobile #반응형</p>
+                            <p class="title">푸르넷 초/중등 홈페이지 구축</p>
+                            <p class="term">2019.04 ~ 2019.06</p>
+                        </a>
+                    </div>
+                    <div class="port-item">
+                        <a href="https://www.supremainc.com/ko/" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_sinhyup.jpg" alt="슈프리마">
+                            </div>
+                            <p class="category">#pc #mobile #반응형</p>
+                            <p class="title">슈프리마 홈페이지 구축</p>
+                            <p class="term">2018.09 ~ 2018.11</p>
+                        </a>
+                    </div>
+                    <div class="port-item">
+                        <a href="http://thub.kumsung.co.kr/main.do" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_ppap.jpg" alt="티칭허브">
+                            </div>
+                            <p class="category">#pc</p>
+                            <p class="title">티칭허브 홈페이지 리뉴얼</p>
+                            <p class="term">2018.02 ~ 2018.04</p>
+                        </a>
+                    </div>
+                    <div class="port-item">
+                        <a href="https://www.keit.re.kr/index.do" target="_blank">
+                            <div class="img-wrap">
+                                <img src="/assets/img/port/port_skt.jpg" alt="한국산업기술평가관리원">
+                            </div>
+                            <p class="category">#pc #mobile #반응형</p>
+                            <p class="title">한국산업기술평가관리원 리뉴얼</p>
+                            <p class="term">2017.12 ~ 2018.01</p>
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
         <!--#include file="./include/_footer.html"-->
-        <button class="btn-top">top</button>
+        <button class="btn-top" title="to the top"></button>
+
+        <script type="text/javascript">
+            $(".port-list").imagesLoaded(function(){
+                $(".port-list").masonry({
+                    itemSelector: '.port-item',
+                    gutter: 30
+                });
+            });
+        </script>
     </div>
 </body>
 </html>

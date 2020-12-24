@@ -1,12 +1,12 @@
 {
-  "name": "publishing_template",
+  "name": "Web_Publisher_Portfolio",
   "version": "1.0.0",
-  "description": "",
+  "description": "정의현의 경력 웹 퍼블리셔 포트폴리오",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "정의현 <darum.ehjung@gmail.com>",
+  "author": "정의현 <uihyun.jung@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^9.8.0",
