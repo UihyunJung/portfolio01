@@ -609,9 +609,15 @@ section{
 
 .port-list{
     margin-top:rem(-50px);
+    .grid__col-sizer {
+        width: calc((100% - 6rem) / 3);
+    }
+    .grid__gutter-sizer {
+        width: rem(30px);
+    }
     > .port-item{
-        width:calc((100% - 60px) / 3);
-        margin-bottom:rem(30px);
+        width:calc((100% - 6rem) / 3);
+        // margin-bottom:rem(30px);
         margin-top:rem(50px);
         text-align: center;
         .img-wrap{
@@ -653,22 +659,52 @@ section{
     }
 }
 
-.grid{
-    position:relative;
-    .grid-sizer{
-        width:calc((100% - 6rem) / 3);
-    }
-    .grid-item{
-        width:calc((100% - 6rem) / 3);
-        padding:0 15px;
-        margin-bottom:rem(30px);
-        text-align: center;
-        img{
-            display:block;
-            width:100%;
-            transition: all ease .5s;
-            border-radius: rem(20px);
+/* infinite scroll loader */
+.page-load-status {
+    display: none; /* hidden by default */
+    text-align: center;
+    color: $txt-color;
+    .loader-ellips {
+        font-size: rem(20px); /* change size here */
+        position: relative;
+        width: 4em;
+        height: 1em;
+        margin: 10px auto;
+        .loader-ellips__dot {
+            display: block;
+            width: 1em;
+            height: 1em;
+            border-radius: 0.5em;
+            background: $txt-color; /* change color here */
+            position: absolute;
+            animation-duration: 0.5s;
+            animation-timing-function: ease;
+            animation-iteration-count: infinite;
+            &:nth-child(1){
+                left: 0;
+                animation-name: reveal;
+            }
+            &:nth-child(2){
+                left: 0;
+                animation-name: slide;
+            }
+            &:nth-child(3){
+                left: 1.5em;
+                animation-name: slide;
+            }
+            &:nth-child(4){
+                left: 1.5em;
+                animation-name: reveal;
+                animation-direction: reverse;
+            }
         }
+    }
+    > p{
+        margin-top:rem(80px);
+        padding-top:rem(40px);
+        border-top:1px solid $main-color;
+        font-size: rem(30px);
+        font-weight: 300;
     }
 }
 
@@ -888,6 +924,17 @@ textarea{
 
 /* scroll down arrow animation */
 @keyframes scrollDown { to { top:rem(40px); }  }
+
+
+/* infinite scroll loading animation */
+@keyframes reveal {
+    from { transform: scale(0.001); }
+    to { transform: scale(1); }
+}
+
+@keyframes slide {
+    to { transform: translateX(1.5em) }
+}
 
 
 
