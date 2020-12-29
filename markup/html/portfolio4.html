@@ -58,5 +58,18 @@
             <p class="term">2008.02 ~ 2009.02</p>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            var $portList = $(".port-list").masonry({
+                itemSelector: '.port-item',
+                columnWidth: '.grid__col-sizer',
+                gutter: '.grid__gutter-sizer',
+            });
+
+            $(".port-list").imagesLoaded(function(){
+                $portList.masonry();
+            });
+        })
+    </script>
 </body>
 </html>

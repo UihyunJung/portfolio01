@@ -60,11 +60,11 @@ html, body{
         text-align: center;
         background: $bg-color url("/assets/img/up_arrow.svg") center center no-repeat;
         background-size: 90% 50%;
-        &:hover, &:active{
-            border-color:$point-color;
-            color:$point-color;
-            background-image:url("/assets/img/up_arrow_hover.svg");
-        }
+        // &:hover, &:active{
+        //     border-color:$point-color;
+        //     color:$point-color;
+        //     background-image:url("/assets/img/up_arrow_hover.svg");
+        // }
     }
 }
 
@@ -102,9 +102,9 @@ header{
             height:rem(30px);
             background:url("/assets/img/icon_home.svg") center center no-repeat;
             background-size: cover;
-            &:hover, &:active{
-                background-image:url("/assets/img/icon_home_hover.svg");
-            }
+            // &:hover, &:active{
+            //     background-image:url("/assets/img/icon_home_hover.svg");
+            // }
         }
     }
     nav{
@@ -134,13 +134,13 @@ header{
                         opacity: 0;
                         transition:all ease 0.3s;
                     }
-                    &:hover, &:active{
-                        color:$point-color;
-                        &::after{
-                            width:100%;
-                            opacity: 1;
-                        }
-                    }
+                    // &:hover, &:active{
+                    //     color:$point-color;
+                    //     &::after{
+                    //         width:100%;
+                    //         opacity: 1;
+                    //     }
+                    // }
                 }
             }
         }
@@ -183,19 +183,19 @@ header{
                 background-color:$main-color;
                 transition:all ease 0.3s;
             }
-            &:hover, &:active{
-                > i{
-                    background-color:$point-color;
-                }
-                &::before{
-                    top:0;
-                    background-color:$point-color;
-                }
-                &::after{
-                    bottom:0;
-                    background-color:$point-color;
-                }
-            }
+            // &:hover, &:active{
+            //     > i{
+            //         background-color:$point-color;
+            //     }
+            //     &::before{
+            //         top:0;
+            //         background-color:$point-color;
+            //     }
+            //     &::after{
+            //         bottom:0;
+            //         background-color:$point-color;
+            //     }
+            // }
             &.open{
                 transition:all ease 0.3s;
                 > i{
@@ -209,15 +209,15 @@ header{
                     top:50%;
                     transform:translateY(-50%) rotate(45deg);
                 }
-                &:hover, &:active{
-                    transform:rotate(90deg);
-                    &::before{
-                        background-color:$point-color;
-                    }
-                    &::after{
-                        background-color:$point-color;
-                    }
-                }
+                // &:hover, &:active{
+                //     transform:rotate(90deg);
+                //     &::before{
+                //         background-color:$point-color;
+                //     }
+                //     &::after{
+                //         background-color:$point-color;
+                //     }
+                // }
             }
         }
     }
@@ -324,12 +324,12 @@ section{
             background-size:cover;
             animation: .8s ease-in infinite alternate scrollDown;
         }
-        &:hover, &:active{
-            color:$point-color;
-            &::after{
-                background-image:url("/assets/img/down_arrow_hover.svg");
-            }
-        }
+        // &:hover, &:active{
+        //     color:$point-color;
+        //     &::after{
+        //         background-image:url("/assets/img/down_arrow_hover.svg");
+        //     }
+        // }
     }
 }
 
@@ -584,17 +584,17 @@ section{
                 transition: all ease .5s;
             }
         }
-        &:hover, &:active{
-            .img-wrap{
-                > img{
-                    filter: grayscale(0%);
-                    transform: scale(1.1);
-                }
-            }
-            .title{
-                color:$point-color;
-            }
-        }
+        // &:hover, &:active{
+        //     .img-wrap{
+        //         > img{
+        //             filter: grayscale(0%);
+        //             transform: scale(1.1);
+        //         }
+        //     }
+        //     .title{
+        //         color:$point-color;
+        //     }
+        // }
         .category{
             font-size: rem(20px);
             font-weight: 300;
@@ -637,16 +637,16 @@ section{
                 transition: all ease .5s;
             }
         }
-        &:hover, &:active{
-            .img-wrap{
-                > img{
-                    transform: scale(1.1);
-                }
-            }
-            .title{
-                color:$point-color;
-            }
-        }
+        // &:hover, &:active{
+        //     .img-wrap{
+        //         > img{
+        //             transform: scale(1.1);
+        //         }
+        //     }
+        //     .title{
+        //         color:$point-color;
+        //     }
+        // }
         .category{
             font-size: rem(20px);
             font-weight: 300;
@@ -774,17 +774,17 @@ footer{
                 &.insta{
                     background-image:url("/assets/img/icon_insta.svg");
                 }
-                &:hover, &:active{
-                    &.github{
-                        background-image:url("/assets/img/icon_github_hover.svg");
-                    }
-                    &.linkedin{
-                        background-image:url("/assets/img/icon_linkedin_hover.svg");
-                    }
-                    &.insta{
-                        background-image:url("/assets/img/icon_insta_hover.svg");
-                    }
-                }
+                // &:hover, &:active{
+                //     &.github{
+                //         background-image:url("/assets/img/icon_github_hover.svg");
+                //     }
+                //     &.linkedin{
+                //         background-image:url("/assets/img/icon_linkedin_hover.svg");
+                //     }
+                //     &.insta{
+                //         background-image:url("/assets/img/icon_insta_hover.svg");
+                //     }
+                // }
             }
         }
     }
@@ -881,10 +881,10 @@ footer{
         z-index:-1;
         transform: translateX(-100%);
     }
-    &:hover, &:active {
-        color: $main-color;
-        &::before { transform: translateX(0); }
-    }
+    // &:hover, &:active {
+    //     color: $main-color;
+    //     &::before { transform: translateX(0); }
+    // }
 }
 
 /* form */
@@ -984,7 +984,7 @@ textarea{
     }
 }
 
-@media (hover: none){
+@media (hover: hover) and (pointer: fine) {
     .wrap{
         .btn-top{
             &:hover{
