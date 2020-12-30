@@ -67,6 +67,16 @@
             $(".port-list").imagesLoaded(function(){
                 $portList.masonry();
             });
+
+            var msnry = $portList.data('masonry');
+
+            $portList.infiniteScroll({
+                path: '/portfolio{{#}}.html',
+                append: '.port-item',
+                history: false,
+                status: '.page-load-status',
+                outlayer: msnry,
+            });
         })
     </script>
 </body>
