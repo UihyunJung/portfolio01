@@ -1100,12 +1100,13 @@ textarea{
     }
 
     .visual{
+        height:100%;
         min-height:auto;
         > .bg{
             background-image:url("/assets/img/bg_visual_m.jpg");
         }
         &.sub{
-            height:100vh;
+            height:100%;
             > .bg01{
                 background-image:url("/assets/img/bg04_m.jpg");
             }
@@ -1128,6 +1129,7 @@ textarea{
         .visual-txt{
             .swiper-slide{
                 > p{
+                    padding:rem(0 15px);
                     font-size: rem(20px);
                     > strong{
                         display:block;
