@@ -2,10 +2,13 @@ $(document).ready(function(){
     // 헤더 네비게이션 메뉴 열기/닫기
     $(".nav-open").on("click", function(){
         if($(this).hasClass("open")){
-            $("header nav > ul").slideUp();
+            $("header nav > div").slideUp();
+            setTimeout(function () {
+                $("header nav > div").removeClass("open");
+            }, 500);
             $(this).removeClass("open");
         } else {
-            $("header nav > ul").slideDown().css("display", "flex");
+            $("header nav > div").slideDown().addClass("open");
             $(this).addClass("open");
         }
     });
