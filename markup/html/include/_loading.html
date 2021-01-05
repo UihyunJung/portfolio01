@@ -1,4 +1,10 @@
 <!-- loading -->
+<script type="text/javascript">
+    $(".wrap").imagesLoaded({background: true})
+    .always(function(instance){
+        $(".loading").hide();
+    })
+</script>
 <div class="loading">
     <div id="load">
         <div>G</div>
@@ -10,10 +16,4 @@
         <div>L</div>
     </div>
 </div>
-<script type="text/javascript">
-    $(".wrap").imagesLoaded({background: true})
-    .always(function(instance){
-        $(".loading").hide();
-    })
-</script>
 <!-- loading -->
