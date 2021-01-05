@@ -1116,11 +1116,9 @@ textarea{
                         background-color:$point-color;
                     }
                     &::before{
-                        top:0;
                         background-color:$point-color;
                     }
                     &::after{
-                        bottom:0;
                         background-color:$point-color;
                     }
                 }
