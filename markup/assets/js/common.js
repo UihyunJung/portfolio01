@@ -1,9 +1,3 @@
-$(".wrap").imagesLoaded({background: true})
-    .always(function(instance){
-        $(".loading").hide();
-    })
-
-
 $(document).ready(function(){
     // 헤더 네비게이션 메뉴 열기/닫기
     $(".nav-open").on("click", function(){
