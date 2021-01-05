@@ -952,6 +952,7 @@ input[type="text"]{
     font-size: rem(16px);
     font-weight: 300;
     color:$main-color!important;
+    border-radius:0;
     &::placeholder{
         color:$txt-color;
     }
@@ -966,6 +967,7 @@ textarea{
     border:1px solid $main-color;
     font-size: rem(16px);
     font-weight: 300;
+    border-radius:0;
     &::placeholder{
         color:$txt-color;
     }
@@ -974,16 +976,6 @@ textarea{
     }
 }
 
-/* media query */
-// @media (hover: hover) {
-
-// }
-
-// @media all and (hover: hover) and (min-width:1080px){
-//     html{
-//         font-size: 10px;
-//     }
-// }
 
 @media all and (max-width:1079px){
     html{
@@ -1382,17 +1374,21 @@ textarea{
 
     .contact-home{
         flex-wrap: wrap;
+        padding-left:rem(10px);
         > li{
-            width:calc((100% - 2rem) / 2);
+            width:55%;
             padding-left:rem(25px);
             font-size: rem(16px);
             background-size:rem(18px 18px);
             &:nth-child(3), &:nth-child(4){
                 margin-top:rem(30px);
             }
+            &:nth-child(2n){
+                width:45%;
+            }
             > p{
-                font-size: rem(12px);
-                margin-top:rem(5px);
+                font-size: rem(14px);
+                margin-top:rem(4px);
             }
         }
     }
@@ -1548,14 +1544,16 @@ textarea{
             }
         }
         nav{
-            > ul{
-                > li{
-                    > a{
-                        &:hover{
-                            color:$point-color;
-                            &::after{
-                                width:100%;
-                                opacity: 1;
+            > div{
+                > ul{
+                    > li{
+                        > a{
+                            &:hover{
+                                color:$point-color;
+                                &::after{
+                                    width:100%;
+                                    opacity: 1;
+                                }
                             }
                         }
                     }
@@ -1579,9 +1577,13 @@ textarea{
                     &:hover{
                         transform:rotate(90deg);
                         &::before{
+                            top:50%;
+                            transform:translateY(-50%) rotate(-45deg);
                             background-color:$point-color;
                         }
                         &::after{
+                            top:50%;
+                            transform:translateY(-50%) rotate(45deg);
                             background-color:$point-color;
                         }
                     }
