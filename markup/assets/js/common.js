@@ -37,7 +37,7 @@ $(document).ready(function(){
         $("html, body").animate({
             scrollTop: vsHeight
         }, 500, function(){
-            window.location.hash = hash;
+            // window.location.hash = hash;
         });
     });
 
@@ -48,7 +48,7 @@ $(document).ready(function(){
         $("html, body").animate({
             scrollTop: 0
         }, 500, function(){
-            window.location.hash = hash;
+            // window.location.hash = hash;
         });
     });
 
@@ -65,7 +65,7 @@ $(document).ready(function(){
     AOS.init();
 });
 
-$(window).scroll(function(){
+$(window).on("scroll", function(){
     var vsHeight = $(".visual").outerHeight();
     // 스크롤 시 top 버튼 보이기/숨기기
     if($(window).scrollTop() >= vsHeight){

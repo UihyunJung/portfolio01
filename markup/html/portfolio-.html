@@ -90,15 +90,14 @@
         <button class="btn-top" title="to the top"></button>
 
         <script type="text/javascript">
-            $(document).ready(function(){
-                var $portList = $(".port-list").masonry({
-                    itemSelector: '.port-item',
-                    columnWidth: '.grid__col-sizer',
-                    gutter: '.grid__gutter-sizer',
-                });
-
-                $(".port-list").imagesLoaded(function(){
-                    $portList.masonry();
+            $(window).on("load", function(){
+                var $portList = $(".port-list").imagesLoaded( function() {
+                    // init Masonry after all images have loaded
+                    $portList.masonry({
+                        itemSelector: '.port-item',
+                        columnWidth: '.grid__col-sizer',
+                        gutter: '.grid__gutter-sizer',
+                    });
 
                     var msnry = $portList.data('masonry');
 
@@ -108,19 +107,30 @@
                         history: false,
                         status: '.page-load-status',
                         outlayer: msnry,
-                        function(newElements){
-                            // hide new items while they are loading
-                            var $newElems = $(newElements).css({opacity: 0});
-                            // ensure that images load before adding to masonry layout
-                            $newElems.imagesLoaded(function(){
-                                // show elems now they're ready
-                                $newElems.animate({opacity: 1});
-                                $portList.masonry('appended', $newElems, true);
-                            });
-                        }
                     });
                 });
-            })
+            });
+            // $(document).ready(function(){
+            //     var $portList = $(".port-list").masonry({
+            //         itemSelector: '.port-item',
+            //         columnWidth: '.grid__col-sizer',
+            //         gutter: '.grid__gutter-sizer',
+            //     });
+
+            //     $portList.imagesLoaded(function(){
+            //         $portList.masonry('layout');
+
+            //         var msnry = $portList.data('masonry');
+
+            //         $portList.infiniteScroll({
+            //             path: '/portfolio-{{#}}.html',
+            //             append: '.port-item',
+            //             history: false,
+            //             status: '.page-load-status',
+            //             outlayer: msnry,
+            //         });
+            //     });
+            // });
         </script>
     </div>
 </body>
