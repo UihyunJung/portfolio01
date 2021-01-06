@@ -289,7 +289,9 @@ section{
         bottom:0;
         left:0;
         right:0;
-        background:url("/assets/img/bg_visual.jpg") center center no-repeat;
+        background-image:url("/assets/img/bg_visual.jpg");
+        background-position:center center;
+        background-repeat:no-repeat;
         background-size:cover;
         background-attachment:fixed;
         opacity:0.08;
@@ -298,7 +300,6 @@ section{
         height:rem(500px);
         min-height:auto;
         > .bg{
-            background-attachment:fixed;
             opacity:0.1;
         }
         > .bg01{
@@ -1142,31 +1143,21 @@ textarea{
         height:100%;
         min-height:auto;
         > .bg{
-            background:url("/assets/img/bg_visual_m.jpg") center center no-repeat;
-            background-size:cover;
-            background-attachment:fixed;
+            background-image:url("/assets/img/bg_visual_m.jpg");
         }
         &.sub{
             height:100%;
             > .bg01{
-                background:url("/assets/img/bg04_m.jpg") center center no-repeat;
-                background-size:cover;
-                background-attachment:fixed;
+                background-image:url("/assets/img/bg04_m.jpg");
             }
             > .bg02{
-                background:url("/assets/img/bg02_m.jpg") center center no-repeat;
-                background-size:cover;
-                background-attachment:fixed;
+                background-image:url("/assets/img/bg02_m.jpg");
             }
             > .bg03{
-                background:url("/assets/img/bg03_m.jpg") center center no-repeat;
-                background-size:cover;
-                background-attachment:fixed;
+                background-image:url("/assets/img/bg03_m.jpg");
             }
             > .bg04{
-                background:url("/assets/img/bg04_m.jpg") center center no-repeat;
-                background-size:cover;
-                background-attachment:fixed;
+                background-image:url("/assets/img/bg04_m.jpg");
             }
             > h2{
                 font-size: rem(18px);
