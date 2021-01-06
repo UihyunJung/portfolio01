@@ -48,42 +48,54 @@ html, body{
     right:0;
     background-color:$bg-color;
     z-index:1000;
-    #load{
+    .loader-wrap{
         position:absolute;
-        width:100%;
-        height:rem(36px);
-        left:50%;
         top:50%;
-        transform: translate(-50%, -50%);
-        overflow:visible;
-        user-select:none;
-        cursor:default;
-        > div{
-            position:absolute;
-            width:rem(20px);
-            height:rem(36px);
-            opacity:0;
-            animation:loadMove 2s linear infinite;
-            transform:rotate(180deg);
+        left:0;
+        transform:translateY(-50%);
+        width:100%;
+        .loader {
+            position: relative;
+            width:rem(44px);
+            height: rem(8px);
+            margin:rem(12px auto);
+            .dot {
+                display: inline-block;
+                width: rem(8px);
+                height: rem(8px);
+                border-radius: 50%;
+                background: $txt-color;
+                position: absolute;
+                &.dot_1 {
+                    animation: animateDot1 1.5s linear infinite;
+                    left: rem(12px);
+                    background: $point-color;
+                }
+
+                &.dot_2 {
+                    animation: animateDot2 1.5s linear infinite;
+                    animation-delay: 0.5s;
+                    left: rem(24px);
+                }
+
+                &.dot_3 {
+                    animation: animateDot3 1.5s linear infinite;
+                    left: rem(12px);
+                }
+
+                &.dot_4 {
+                    animation: animateDot4 1.5s linear infinite;
+                    animation-delay: 0.5s;
+                    left: rem(24px);
+                }
+            }
+        }
+        > p{
+            font-size: rem(30px);
+            font-weight: 300;
             color:$point-color;
-            &:nth-child(2){
-                animation-delay:0.2s;
-            }
-            &:nth-child(3){
-                animation-delay:0.4s;
-            }
-            &:nth-child(4){
-                animation-delay:0.6s;
-            }
-            &:nth-child(5){
-                animation-delay:0.8s;
-            }
-            &:nth-child(6){
-                animation-delay:1.0s;
-            }
-            &:nth-child(7){
-                animation-delay:1.2s;
-            }
+            text-align: center;
+            margin-top:rem(25px);
         }
     }
 }
@@ -1711,26 +1723,32 @@ textarea{
 }
 
 /* loading animation */
-@keyframes loadMove {
-    0% {
-        left:0;
-        opacity:0;
-    }
-    35% {
-        left: 41%;
-        transform:rotate(0deg);
-        opacity:1;
-    }
-    65% {
-        left:59%;
-        transform:rotate(0deg);
-        opacity:1;
-    }
-    100% {
-        left:100%;
-        transform:rotate(-180deg);
-        opacity:0;
-    }
+@keyframes animateDot1 {
+    0%{ transform: rotate(0deg) translateX(rem(-12px)); }
+    25% { transform: rotate(180deg) translateX(rem(-12px)); }
+    75% { transform: rotate(180deg) translateX(rem(-12px)); }
+    100% { transform: rotate(360deg) translateX(rem(-12px)); }
+}
+
+@keyframes animateDot2 {
+    0%{ transform: rotate(-0deg) translateX(rem(-12px)); }
+    25% { transform: rotate(-180deg) translateX(rem(-12px)); }
+    75% { transform: rotate(-180deg) translateX(rem(-12px)); }
+    100% { transform: rotate(-360deg) translateX(rem(-12px)); }
+}
+
+@keyframes animateDot3 {
+    0%{ transform: rotate(0deg) translateX(rem(12px)); }
+    25% { transform: rotate(180deg) translateX(rem(12px)); }
+    75% { transform: rotate(180deg) translateX(rem(12px)); }
+    100% { transform: rotate(360deg) translateX(rem(12px)); }
+}
+
+@keyframes animateDot4 {
+    0%{ transform: rotate(-0deg) translateX(rem(12px)); }
+    25% { transform: rotate(-180deg) translateX(rem(12px)); }
+    75% { transform: rotate(-180deg) translateX(rem(12px)); }
+    100% { transform: rotate(-360deg) translateX(rem(12px)); }
 }
 
 /* scroll down arrow animation */
