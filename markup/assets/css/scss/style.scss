@@ -301,9 +301,7 @@ section{
         bottom:0;
         left:0;
         right:0;
-        background-image:url("/assets/img/bg_visual.jpg");
-        background-position:center center;
-        background-repeat:no-repeat;
+        background:url("/assets/img/bg_visual.jpg") center center no-repeat;
         background-size:cover;
         background-attachment:fixed;
         opacity:0.08;
@@ -1156,6 +1154,7 @@ textarea{
         min-height:auto;
         > .bg{
             background-image:url("/assets/img/bg_visual_m.jpg");
+            background-size: 100vmax 100vmax;
         }
         &.sub{
             height:100%;
