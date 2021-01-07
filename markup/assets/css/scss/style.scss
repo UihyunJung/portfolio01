@@ -1155,6 +1155,7 @@ textarea{
         > .bg{
             background-image:url("/assets/img/bg_visual_m.jpg");
             background-size: 100vmax 100vmax;
+            background-attachment: scroll;
         }
         &.sub{
             height:100%;

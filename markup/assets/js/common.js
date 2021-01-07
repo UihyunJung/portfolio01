@@ -87,6 +87,11 @@ $(window).on("scroll", function(){
         $(".btn-top").fadeOut("fast");
         $("header").removeClass("sticky");
     }
+
+    // iOS background bug fix
+    if($(window).width() < 1080){
+        $(".visual .bg").css("background-position", "center " + $(window).scrollTop() + "px");
+    }
 });
 
 (function () {
