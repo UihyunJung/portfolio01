@@ -1,18 +1,18 @@
-# 정의현 웹퍼블리셔 포트폴리오 :computer:
+# :computer: 정의현 웹퍼블리셔 포트폴리오 
 
-## Project setup
+## :point_right: Project setup
 ```
 npm install
 ```
 
-## Compiles for development
+## :point_right: Compiles for development
 ```
 gulp
 ```
 
-## compiles for production
+## :point_right: compiles for production
 ```
 gulp build
 ```
 
-Thank you.
+Thank you :heart:
