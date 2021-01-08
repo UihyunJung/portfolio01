@@ -1012,7 +1012,6 @@ input[type="text"]{
     font-size: rem(16px);
     font-weight: 300;
     color:$main-color!important;
-    border-radius:0;
     &::placeholder{
         color:$txt-color;
     }
@@ -1027,7 +1026,6 @@ textarea{
     border:1px solid $main-color;
     font-size: rem(16px);
     font-weight: 300;
-    border-radius:0;
     &::placeholder{
         color:$txt-color;
     }

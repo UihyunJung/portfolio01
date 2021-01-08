@@ -223,17 +223,20 @@ button, select
     cursor: pointer
 
 textarea, input, select
-    // -webkit-border-radius: 0
-    // -ms-border-radius: 0
-    // -moz-border-radius: 0
-    // border-radius: 0
-    // border: 0
+    -webkit-border-radius: 0
+    -ms-border-radius: 0
+    -moz-border-radius: 0
+    border-radius: 0
+    border: 0
     outline-color: -moz-use-text-color
     outline-style: none
     outline-width: medium
 
 textarea
     resize: none
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
 
 label
     cursor: pointer
@@ -298,8 +301,8 @@ input
     cursor: pointer
   &[type="button"], &[type="text"], &[type="image"], &[type="submit"]
     -webkit-appearance: none
-    // -webkit-border-radius: 0
-    // border-radius: 0
+    -webkit-border-radius: 0
+    border-radius: 0
   &:checked[type="checkbox"]
     background-color: #fff
     -webkit-appearance: checkbox
