@@ -92,6 +92,7 @@
         <script type="text/javascript">
             $(window).on("load", function(){
                 var $portList = $(".port-list").imagesLoaded(function() {
+                    // init Masonry after all images have loaded
                     $portList.masonry({
                         itemSelector: '.port-item',
                         columnWidth: '.grid__col-sizer',
