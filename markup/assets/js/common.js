@@ -3,10 +3,12 @@ $(window).on("load", function(){
     $(".wrap").imagesLoaded({background: true})
     .always(function(instance){
         $(".loading").hide();
+        $.unlockBody();
     })
 });
 
 $(document).ready(function(){
+    $.lockBody();
     // 헤더 네비게이션 메뉴 열기/닫기
     $(".nav-open").on("click", function(){
         if($(this).hasClass("open")){
