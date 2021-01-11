@@ -563,6 +563,13 @@ section{
     }
 }
 
+.skill-introduce{
+    font-size: rem(16px);
+    font-weight: 400;
+    color:$txt-color;
+    margin-bottom: rem(40px);
+}
+
 .timeline{
     position:relative;
     padding:rem(50px 0);
@@ -1158,10 +1165,10 @@ textarea{
         &.sub{
             height:100%;
             > .bg01{
-                background-image:url("/assets/img/bg03_m.jpg");
+                background-image:url("/assets/img/bg01_m.jpg");
             }
             > .bg02{
-                background-image:url("/assets/img/bg02_m.jpg");
+                background-image:url("/assets/img/bg03_m.jpg");
             }
             > .bg03{
                 background-image:url("/assets/img/bg03_m.jpg");
@@ -1271,6 +1278,11 @@ textarea{
                 font-size: rem(12px);
             }
         }
+    }
+
+    .skill-introduce{
+        font-size: rem(14px);
+        margin-bottom: rem(30px);
     }
 
     .timeline{
