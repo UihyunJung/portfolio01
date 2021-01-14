@@ -17,13 +17,13 @@ $(document).ready(function(){
             setTimeout(function () {
                 $("header nav > div").removeClass("open");
             }, 500);
-            $(this).removeClass("open");
+            $(this).removeClass("open").find(".hidden").text("메뉴 열기");
         } else {
             if($(window).width() < 1080){
                 $.lockBody();
             }
             $("header nav > div").slideDown().addClass("open");
-            $(this).addClass("open");
+            $(this).addClass("open").find(".hidden").text("메뉴 닫기");
         }
     });
 
