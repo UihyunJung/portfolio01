@@ -58,12 +58,23 @@
     </div>
     <script type="text/javascript">
         $(window).on("load", function(){
-            var $portList = $(".port-list").imagesLoaded(function() {
-                // init Masonry after all images have loaded
-                $portList.masonry({
-                    itemSelector: '.port-item',
-                    columnWidth: '.grid__col-sizer',
-                    gutter: '.grid__gutter-sizer',
+            var $portList = $(".port-list").masonry({
+                itemSelector: '.port-item',
+                columnWidth: '.grid__col-sizer',
+                gutter: '.grid__gutter-sizer',
+            });
+
+            $(".port-list").imagesLoaded(function(){
+                $portList.masonry();
+
+                var msnry = $portList.data('masonry');
+
+                $portList.infiniteScroll({
+                    path: '/portfolio-{{#}}.html',
+                    append: '.port-item',
+                    history: false,
+                    status: '.page-load-status',
+                    outlayer: msnry,
                 });
             });
         });

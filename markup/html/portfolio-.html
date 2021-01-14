@@ -1,9 +1,43 @@
 <!DOCTYPE html>
 <html lang="ko-KR">
 <head>
-<!--#include file="./include/_head.html"-->
+    <!--#include file="./include/_head.html"-->
+    <title>정의현 | 웹퍼블리셔 포트폴리오 > PORTFOLIO</title>
 </head>
 <body>
+    <script type="text/javascript">
+        function preloading(imageArray){
+            let n = imageArray.length;
+            for (let i = 0; i < n; i++){
+                let img = new Image();
+                img.src = imageArray[i];
+            }
+        }
+        preloading([
+            '/assets/img/port/port_tworld_new.jpg',
+            '/assets/img/port/port_mitsubishi.jpg',
+            '/assets/img/port/port_point.jpg',
+            '/assets/img/port/port_sinhyup.jpg',
+            '/assets/img/port/port_ppap.jpg',
+            '/assets/img/port/port_skt.jpg',
+            '/assets/img/port/port_uplus.jpg',
+            '/assets/img/port/port_ele.jpg',
+            '/assets/img/port/port_mid.jpg',
+            '/assets/img/port/port_tworld.jpg',
+            '/assets/img/port/port_suprema.jpg',
+            '/assets/img/port/port_medialog.jpg',
+            '/assets/img/port/port_teaching.jpg',
+            '/assets/img/port/port_keit.jpg',
+            '/assets/img/port/port_lgdisplay.jpg',
+            '/assets/img/port/port_kt.jpg',
+            '/assets/img/port/port_nuun.jpg',
+            '/assets/img/port/port_highland.jpg',
+            '/assets/img/port/port_eugene.jpg',
+            '/assets/img/port/port_ybuy.jpg',
+            '/assets/img/port/port_odmate.jpg',
+            '/assets/img/port/port_revu.jpg'
+        ])
+    </script>
     <!--#include file="./include/_loading.html"-->
     <div class="wrap">
         <!--#include file="./include/_header.html"-->
@@ -91,13 +125,14 @@
 
         <script type="text/javascript">
             $(window).on("load", function(){
-                var $portList = $(".port-list").imagesLoaded(function() {
-                    // init Masonry after all images have loaded
-                    $portList.masonry({
-                        itemSelector: '.port-item',
-                        columnWidth: '.grid__col-sizer',
-                        gutter: '.grid__gutter-sizer',
-                    });
+                var $portList = $(".port-list").masonry({
+                    itemSelector: '.port-item',
+                    columnWidth: '.grid__col-sizer',
+                    gutter: '.grid__gutter-sizer',
+                });
+
+                $(".port-list").imagesLoaded(function(){
+                    $portList.masonry();
 
                     var msnry = $portList.data('masonry');
 
