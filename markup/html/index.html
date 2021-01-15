@@ -6,6 +6,22 @@
 </head>
 <body>
     <!--#include file="./include/_google_tag_manager.html"-->
+    <script type="text/javascript">
+        function preloading(imageArray){
+            let n = imageArray.length;
+            for (let i = 0; i < n; i++){
+                let img = new Image();
+                img.src = imageArray[i];
+            }
+        }
+        preloading([
+            '/assets/img/down_arrow_hover.svg',
+            '/assets/img/icon_github_hover.svg',
+            '/assets/img/icon_insta_hover.svg',
+            '/assets/img/icon_linkedin_hover.svg',
+            '/assets/img/up_arrow_hover.svg'
+        ])
+    </script>
     <!--#include file="./include/_loading.html"-->
     <div class="wrap">
         <!--#include file="./include/_header.html"-->
