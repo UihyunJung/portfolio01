@@ -12,7 +12,9 @@ $(document).ready(function(){
     // 헤더 네비게이션 메뉴 열기/닫기
     $(".nav-open").on("click", function(){
         if($(this).hasClass("open")){
-            $.unlockBody();
+            if($(window).width() < 1080){
+                $.unlockBody();
+            }
             $("header nav > div").slideUp();
             setTimeout(function () {
                 $("header nav > div").removeClass("open");
