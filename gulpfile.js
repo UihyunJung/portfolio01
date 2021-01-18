@@ -45,6 +45,10 @@ var paths = {
     src: "./markup/html/**/*",
     ignore: "!./markup/html/include",
     dest: "./dist"
+  },
+  json: {
+    src: "./markup/assets/data/**/*",
+    dest: "./dist/assets/data"
   }
 }
 
@@ -63,6 +67,12 @@ async function clean(cb) {
 async function fonts() {
   return src(paths.fonts.src)
     .pipe(dest(paths.fonts.dest))
+}
+
+// Copying json
+async function json() {
+  return src(paths.json.src)
+    .pipe(dest(paths.json.dest))
 }
 
 // Optimize Images
@@ -174,6 +184,7 @@ async function watchFiles() {
   watch(paths.csscopy.src, csscopy);
   watch(paths.js.src, series(scripts, reload));
   watch(paths.html.src, series(htmlssi, reload));
+  watch(paths.json.src, series(json, reload));
 }
 
 // revision css
@@ -222,7 +233,7 @@ async function updateAssets() {
 
 // define complex tasks
 const revAll = series(revCss, updateCss, revAssets, updateAssets);
-const web = parallel(fonts, images, scss, csscopy, scripts, htmlssi);
+const web = parallel(fonts, json, images, scss, csscopy, scripts, htmlssi);
 const build = series(clean, web, optImg);
 const buildRev = series(clean, web, revAll);
 
@@ -230,6 +241,7 @@ const buildRev = series(clean, web, revAll);
 exports.reload = reload;
 exports.clean = clean;
 exports.fonts = fonts;
+exports.json = json;
 exports.images = images;
 exports.optImg = optImg;
 exports.scss = scss;

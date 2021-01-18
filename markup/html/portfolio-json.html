@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <!--#include file="./include/_head.html"-->
+    <title>정의현 | 웹퍼블리셔 포트폴리오 > PORTFOLIO</title>
+</head>
+<body>
+    <!--#include file="./include/_loading.html"-->
+    <div class="wrap">
+        <!--#include file="./include/_header.html"-->
+        <section class="visual sub">
+            <div class="bg bg02"></div>
+            <h2><strong>Portfolio</strong><br>나의 경험들</h2>
+            <button class="btn-scrolldown">Scroll Down</button>
+        </section>
+
+        <section class="contents">
+            <div class="inner">
+                <h3><strong>Work Experience</strong></h3>
+
+                <div class="port-list">
+                    <div class="grid__col-sizer"></div>
+                    <div class="grid__gutter-sizer"></div>
+                </div>
+                <div class="btn-wrap center" id="load-more">
+                    <button class="btn" id="load-more">load more</button>
+                </div>
+            </div>
+        </section>
+        <!--#include file="./include/_footer.html"-->
+        <!--#include file="./include/_btn-top.html"-->
+
+        <script type="text/javascript">
+            $(function() {
+                $('.port-list').each(function() {
+                // 1. 준비
+                var $container = $(this),
+                    $loadMoreButton = $('#load-more'),
+                    addItemCount = 6,
+                    addedd = 0,
+                    allData = [],
+                    filteredData = [];
+                //이미지 사이즈 세팅
+                $container.masonry({
+                    itemSelector: '.port-item',
+                    columnWidth: '.grid__col-sizer',
+                    gutter: '.grid__gutter-sizer',
+                });
+
+                // 2. JSON 가져오기
+                $.getJSON('/assets/data/content.json', initGallery);
+
+                // 3. 갤러리 초기화
+                function initGallery(data) {
+
+                    allData = data;
+                    filteredData = allData;
+                    addItems();
+                    $loadMoreButton.find(".btn").on('click', addItems);
+                    $filter.on('change', 'input[type="radio"]');
+                }
+
+                // 4. 항목을 생성하고 문서에 삽입
+                function addItems(filter) {
+
+                    var elements = [],
+                    slicedData = filteredData.slice(addedd, addedd + addItemCount);
+                    $.each(slicedData, function(i, item) {
+                        if(item.hasOwnProperty('link')){
+                            console.log("aaa");
+                            var itemHTML =
+                            '<div class="port-item">' +
+                                '<a href="' + item.link + '" target="_blank">' +
+                                    '<div class="img-wrap">' +
+                                        '<img src="' + item.img.src + '" alt="' + item.img.alt + '">' +
+                                    '</div>' +
+                                    '<p class="category">' + item.tag + '</p>' +
+                                    '<p class="title">' + item.title + '</p>' +
+                                    '<p class="term">' + item.term + '</p>' +
+                                '</a>' +
+                            '</div>';
+                        } else {
+                            console.log("bbb");
+                            var itemHTML =
+                            '<div class="port-item">' +
+                                '<div class="img-wrap">' +
+                                    '<img src="' + item.img.src + '" alt="' + item.img.alt + '">' +
+                                '</div>' +
+                                '<p class="category">' + item.tag + '</p>' +
+                                '<p class="title">' + item.title + '</p>' +
+                                '<p class="term">' + item.term + '</p>' +
+                            '</div>';
+                        }
+                        elements.push($(itemHTML).get(0));
+                    });
+
+                    // Masonry 실행
+                    $container
+                    .append(elements)
+                    .imagesLoaded(function() {
+                        $(elements).removeClass('is-loading');
+                        $container.masonry('appended', elements);
+
+                        if (filter) {
+                        $container.masonry();
+                        }
+                    });
+
+                    addedd += slicedData.length;
+                    if (addedd < filteredData.length) {
+                    $loadMoreButton.show();
+                    } else {
+                    $loadMoreButton.hide();
+                    }
+                }
+
+                });
+
+                });
+        </script>
+    </div>
+</body>
+</html>

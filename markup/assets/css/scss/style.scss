@@ -738,7 +738,6 @@ section{
     }
     > .port-item{
         width:calc((100% - 6rem) / 3);
-        // margin-bottom:rem(30px);
         margin-top:rem(50px);
         text-align: center;
         .img-wrap{
@@ -750,16 +749,6 @@ section{
                 transition: all ease .5s;
             }
         }
-        // &:hover, &:active{
-        //     .img-wrap{
-        //         > img{
-        //             transform: scale(1.1);
-        //         }
-        //     }
-        //     .title{
-        //         color:$point-color;
-        //     }
-        // }
         .category{
             font-size: rem(20px);
             font-weight: 300;
@@ -1406,6 +1395,9 @@ textarea{
         > .port-item{
             width:calc((100% - 1.5rem) / 2);
             margin-top:rem(40px);
+            &.is-loading{
+                opacity:0;
+            }
             .img-wrap{
                 border-radius: rem(10px);
             }

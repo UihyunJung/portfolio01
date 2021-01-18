@@ -125,18 +125,16 @@
 
         <script type="text/javascript">
             $(window).on("load", function(){
-                var $portList = $(".port-list").isotope({
+                var $portList = $(".port-list").masonry({
                     itemSelector: '.port-item',
-                    masonry:{
-                        columnWidth: '.grid__col-sizer',
-                        gutter: '.grid__gutter-sizer'
-                    }
+                    columnWidth: '.grid__col-sizer',
+                    gutter: '.grid__gutter-sizer',
                 });
 
                 $(".port-list").imagesLoaded(function(){
-                    $portList.isotope();
+                    $portList.masonry();
 
-                    var msnry = $portList.data('isotope');
+                    var msnry = $portList.data('masonry');
 
                     $portList.infiniteScroll({
                         path: '/portfolio-{{#}}.html',
