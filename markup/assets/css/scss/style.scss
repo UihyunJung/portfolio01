@@ -959,6 +959,14 @@ footer{
     &.center{
         text-align: center;
     }
+    #no-more{
+        display:none;
+        padding-top:rem(40px);
+        border-top:1px dashed $txt-color;
+        font-size: rem(30px);
+        font-weight: 300;
+        color:$txt-color;
+    }
 }
 .btn{
     position:relative;
@@ -983,10 +991,25 @@ footer{
         z-index:-1;
         transform: translateX(-100%);
     }
-    // &:hover, &:active {
-    //     color: $main-color;
-    //     &::before { transform: translateX(0); }
-    // }
+}
+.filter-button-group{
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    > button{
+        font-size: rem(20px);
+        font-weight: 100;
+        margin-bottom:rem(40px);
+        transition: all .2s ease;
+        & + button{
+            margin-left:rem(40px);
+        }
+        &.on{
+            font-size: rem(40px);
+            font-weight: 300;
+            color:$point-color;
+        }
+    }
 }
 
 /* form */
