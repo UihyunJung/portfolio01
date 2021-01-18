@@ -1,10 +1,53 @@
 // 페이지 로딩
 $(window).on("load", function(){
-    $(".wrap").imagesLoaded({background: true})
-    .always(function(instance){
-        $(".loading").hide();
-        $.unlockBody();
-    })
+    // $(".wrap").imagesLoaded({background: true})
+    // .always(function(instance){
+    //     $(".loading").hide();
+    //     $.unlockBody();
+    // })
+    imagesProgress();
+    function imagesProgress () {
+    var $container    = $('.loading'),
+        $progressBar  = $container.find('.progress-bar'),
+        $progressText = $container.find('.progress-text'),
+
+        imgLoad       = imagesLoaded('body', {background: true}),//이미지 로딩을 모니터링
+        imgTotal      = imgLoad.images.length,//body 전체 이미지갯수
+        imgLoaded     = 0,// 읽은 이미지갯수
+        current       = 0,//현재 진행률
+        // 1 초에 60 번씩 읽어 여부 확인
+        progressTimer = setInterval(updateProgress, 1000 / 60);
+
+    // imagesLoaded를 통해 이미지로드 할 때마다 카운터증가
+    imgLoad.on('progress', function () {
+        imgLoaded++;
+    });
+
+    function updateProgress () {
+
+        var target = (imgLoaded / imgTotal) * 100;// 로드한 이미지의 비율
+        current += (target - current) * 0.1;//부드러운 여유
+        $progressBar.css({ width: current + '%' });
+        $progressText.text(Math.floor(current) + '%');
+
+        if(imgTotal == 0){
+            clearInterval(progressTimer);
+            $progressBar.css({ width: '100%' });
+            $progressText.text('100%');
+            $container.fadeOut();
+            $.unlockBody();
+        }
+        if(current >= 100 || imgTotal == 0){
+            clearInterval(progressTimer);
+            $container.fadeOut();
+            $.unlockBody();
+            $progressBar.add($progressText) // add는 그룹화
+        }
+        if (current > 99.9) {
+            current = 100;
+        }
+    }
+    }
 });
 
 $(document).ready(function(){
