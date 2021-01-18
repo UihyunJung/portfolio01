@@ -19,12 +19,12 @@
                 <h3><strong>Work Experience</strong></h3>
 
                 <div class="filter-button-group">
-                    <button data-filter="*" class="on">Show All</button>
-                    <button data-filter=".pc">PC</button>
-                    <button data-filter=".mobile">Mobile</button>
-                    <button data-filter=".response">반응형</button>
-                    <button data-filter=".manage">운영</button>
-                    <button data-filter=".plan">기획</button>
+                    <button value="all" class="on">All</button>
+                    <button value="pc">PC</button>
+                    <button value="mobile">Mobile</button>
+                    <button value="response">반응형</button>
+                    <button value="manage">운영</button>
+                    <button value="plan">기획</button>
                 </div>
 
                 <div class="port-list">
@@ -46,6 +46,7 @@
                     // 1. 준비
                     var $container = $(this),
                         $loadMoreButton = $('#load-more'),
+                        $filter = $('.filter-button-group'),
                         addItemCount = 6,
                         addedd = 0,
                         allData = [],
@@ -68,6 +69,7 @@
                         filteredData = allData;
                         addItems();
                         $loadMoreButton.on('click', addItems);
+                        $filter.on('click', 'button', filterItems);
                     }
 
                     // 4. 항목을 생성하고 문서에 삽입
@@ -116,19 +118,31 @@
                         addedd += slicedData.length;
                         if (addedd < filteredData.length) {
                             $loadMoreButton.show();
+                            $('#no-more').hide();
                         } else {
                             $loadMoreButton.hide();
                             $('#no-more').show();
                         }
                     }
-                });
 
-                $('.filter-button-group').on( 'click', 'button', function() {
-                    var $container = $('.port-list');
-                        filterValue = $(this).attr('data-filter');
-                    $(this).addClass("on").siblings().removeClass("on");
-                    var item = $container.isotope({ filter: filterValue });
-                    console.log(item);
+                    // 5. 항목 필터링
+                    function filterItems() {
+                        var key = $(this).val(),
+                        masonryItems = $container.isotope('getItemElements');
+                        $(this).addClass("on").siblings().removeClass("on");
+                        $container.isotope('remove', masonryItems);
+                        filteredData = [];
+                        addedd = 0;
+
+                        if (key === 'all') {
+                            filteredData = allData;
+                        } else {
+                            filteredData = $.grep(allData, function(item) {
+                                return item.filter.indexOf(key) != -1;
+                            });
+                        }
+                        addItems(true);
+                    }
                 });
             });
         </script>
