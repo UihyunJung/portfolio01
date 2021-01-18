@@ -125,16 +125,18 @@
 
         <script type="text/javascript">
             $(window).on("load", function(){
-                var $portList = $(".port-list").masonry({
+                var $portList = $(".port-list").isotope({
                     itemSelector: '.port-item',
-                    columnWidth: '.grid__col-sizer',
-                    gutter: '.grid__gutter-sizer',
+                    masonry:{
+                        columnWidth: '.grid__col-sizer',
+                        gutter: '.grid__gutter-sizer'
+                    }
                 });
 
                 $(".port-list").imagesLoaded(function(){
-                    $portList.masonry();
+                    $portList.isotope();
 
-                    var msnry = $portList.data('masonry');
+                    var msnry = $portList.data('isotope');
 
                     $portList.infiniteScroll({
                         path: '/portfolio-{{#}}.html',
@@ -145,27 +147,6 @@
                     });
                 });
             });
-            // $(document).ready(function(){
-            //     var $portList = $(".port-list").masonry({
-            //         itemSelector: '.port-item',
-            //         columnWidth: '.grid__col-sizer',
-            //         gutter: '.grid__gutter-sizer',
-            //     });
-
-            //     $portList.imagesLoaded(function(){
-            //         $portList.masonry('layout');
-
-            //         var msnry = $portList.data('masonry');
-
-            //         $portList.infiniteScroll({
-            //             path: '/portfolio-{{#}}.html',
-            //             append: '.port-item',
-            //             history: false,
-            //             status: '.page-load-status',
-            //             outlayer: msnry,
-            //         });
-            //     });
-            // });
         </script>
     </div>
 </body>
