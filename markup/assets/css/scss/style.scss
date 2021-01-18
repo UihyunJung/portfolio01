@@ -1558,6 +1558,10 @@ textarea{
     /* button */
     .btn-wrap{
         margin-top:rem(40px);
+        #no-more{
+            padding-top:rem(20px);
+            font-size: rem(20px);
+        }
     }
     .btn{
         font-size: rem(20px);
