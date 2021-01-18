@@ -6,6 +6,39 @@
 </head>
 <body>
     <!--#include file="./include/_google_tag_manager.html"-->
+    <script type="text/javascript">
+        function preloading(imageArray){
+            let n = imageArray.length;
+            for (let i = 0; i < n; i++){
+                let img = new Image();
+                img.src = imageArray[i];
+            }
+        }
+        preloading([
+            '/assets/img/port/port_tworld_new.jpg',
+            '/assets/img/port/port_mitsubishi.jpg',
+            '/assets/img/port/port_point.jpg',
+            '/assets/img/port/port_sinhyup.jpg',
+            '/assets/img/port/port_ppap.jpg',
+            '/assets/img/port/port_skt.jpg',
+            '/assets/img/port/port_uplus.jpg',
+            '/assets/img/port/port_ele.jpg',
+            '/assets/img/port/port_mid.jpg',
+            '/assets/img/port/port_tworld.jpg',
+            '/assets/img/port/port_suprema.jpg',
+            '/assets/img/port/port_medialog.jpg',
+            '/assets/img/port/port_teaching.jpg',
+            '/assets/img/port/port_keit.jpg',
+            '/assets/img/port/port_lgdisplay.jpg',
+            '/assets/img/port/port_kt.jpg',
+            '/assets/img/port/port_nuun.jpg',
+            '/assets/img/port/port_highland.jpg',
+            '/assets/img/port/port_eugene.jpg',
+            '/assets/img/port/port_ybuy.jpg',
+            '/assets/img/port/port_odmate.jpg',
+            '/assets/img/port/port_revu.jpg'
+        ])
+    </script>
     <!--#include file="./include/_loading.html"-->
     <div class="wrap">
         <!--#include file="./include/_header.html"-->
@@ -18,6 +51,15 @@
         <section class="contents">
             <div class="inner">
                 <h3><strong>Work Experience</strong></h3>
+
+                <div class="filter-button-group">
+                    <button value="all" class="on">All</button>
+                    <button value="pc">PC</button>
+                    <button value="mobile">Mobile</button>
+                    <button value="response">반응형</button>
+                    <button value="manage">운영</button>
+                    <button value="plan">기획</button>
+                </div>
 
                 <div class="port-list">
                     <div class="grid__col-sizer"></div>
@@ -38,6 +80,7 @@
                     // 1. 준비
                     var $container = $(this),
                         $loadMoreButton = $('#load-more'),
+                        $filter = $('.filter-button-group'),
                         addItemCount = 6,
                         addedd = 0,
                         allData = [],
@@ -60,6 +103,7 @@
                         filteredData = allData;
                         addItems();
                         $loadMoreButton.on('click', addItems);
+                        $filter.on('click', 'button', filterItems);
                     }
 
                     // 4. 항목을 생성하고 문서에 삽입
@@ -108,10 +152,30 @@
                         addedd += slicedData.length;
                         if (addedd < filteredData.length) {
                             $loadMoreButton.show();
+                            $('#no-more').hide();
                         } else {
                             $loadMoreButton.hide();
                             $('#no-more').show();
                         }
+                    }
+
+                    // 5. 항목 필터링
+                    function filterItems() {
+                        var key = $(this).val(),
+                        masonryItems = $container.isotope('getItemElements');
+                        $(this).addClass("on").siblings().removeClass("on");
+                        $container.isotope('remove', masonryItems);
+                        filteredData = [];
+                        addedd = 0;
+
+                        if (key === 'all') {
+                            filteredData = allData;
+                        } else {
+                            filteredData = $.grep(allData, function(item) {
+                                return item.filter.indexOf(key) != -1;
+                            });
+                        }
+                        addItems(true);
                     }
                 });
             });
