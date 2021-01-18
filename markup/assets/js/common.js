@@ -1,10 +1,5 @@
 // 페이지 로딩
-$(window).on("load", function(){
-    // $(".wrap").imagesLoaded({background: true})
-    // .always(function(instance){
-    //     $(".loading").hide();
-    //     $.unlockBody();
-    // })
+$(function(){
     imagesProgress();
     function imagesProgress () {
     var $container    = $('.loading'),
@@ -37,7 +32,7 @@ $(window).on("load", function(){
             $container.fadeOut();
             $.unlockBody();
         }
-        if(current >= 100 || imgTotal == 0){
+        if(current >= 100){
             clearInterval(progressTimer);
             $container.fadeOut();
             $.unlockBody();
@@ -48,7 +43,7 @@ $(window).on("load", function(){
         }
     }
     }
-});
+})
 
 $(document).ready(function(){
     $.lockBody();
