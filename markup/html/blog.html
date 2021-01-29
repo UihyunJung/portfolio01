@@ -17,6 +17,9 @@
 
         <section class="contents">
             <div class="inner">
+                <ul id="blog-list">
+
+                </ul>
                 <div class="under-construction">
                     <img src="/assets/img/icon_underconstruction.svg" alt="작업중입니다.">
                     <p><span>Under Construction</span><br>작업중입니다.</p>
@@ -26,5 +29,26 @@
         <!--#include file="./include/_footer.html"-->
         <!--#include file="./include/_btn-top.html"-->
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $.ajax({
+                url: "https://v2.velog.io/rss/nooroong",
+                type: "GET",
+                dataType: "xml"
+            }).done(function(data) {
+                $(data).find("channel item").each(function(i) {
+                    if(i==5) return false;
+                    var title = $(this).find("title").text(),
+                        link = $(this).find("link").text(),
+                        date = $(this).find("pubDate").text(),
+                        desc = (new DOMParser).parseFromString($(this).find("description").text(), "text/html"),
+                        newDate = date.getFullYear() + "." + (n.getMonth() + 1) + "." + n.getDate();
+                    console.log(title,link,desc,newDate);
+                })
+            }).fail(function() {
+                console.error("블로그 데이터 불러오기에 실패했습니다.")
+            })
+        });
+    </script>
 </body>
 </html>
