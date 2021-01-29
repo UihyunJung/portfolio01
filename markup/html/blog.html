@@ -32,18 +32,22 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $.ajax({
-                url: "https://v2.velog.io/rss/nooroong",
+                url: "https://nooroong.tistory.com/rss",
                 type: "GET",
                 dataType: "xml"
             }).done(function(data) {
+                $("#blog-list").empty();
                 $(data).find("channel item").each(function(i) {
                     if(i==5) return false;
                     var title = $(this).find("title").text(),
                         link = $(this).find("link").text(),
-                        date = $(this).find("pubDate").text(),
+                        date = new Date($(this).find("pubDate").text()),
                         desc = (new DOMParser).parseFromString($(this).find("description").text(), "text/html"),
-                        newDate = date.getFullYear() + "." + (n.getMonth() + 1) + "." + n.getDate();
-                    console.log(title,link,desc,newDate);
+                        img = $(desc).find("img"),
+                        imgLength = img.length,
+                        imgSrc = img.eq(0).attr("src"),
+                        newDate = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
+                    console.log(title,link,desc,date,img,imgLength,imgSrc,newDate);
                 })
             }).fail(function() {
                 console.error("블로그 데이터 불러오기에 실패했습니다.")
