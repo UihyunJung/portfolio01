@@ -1,9 +1,5 @@
 // 페이지 로딩
-// $(window).on("load", function(){
-
-// })
-
-$(function(){
+$(window).on("load", function(){
     imagesProgress();
     function imagesProgress () {
         var $container    = $('.loading'),
