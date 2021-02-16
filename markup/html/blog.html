@@ -17,13 +17,25 @@
 
         <section class="contents">
             <div class="inner">
-                <ul id="blog-list">
-
+                <h3><strong>My Archives</strong><br></h3>
+                <ul class="blog-list">
+                    <!-- <li>
+                        <a href="javascript:;" target="_blank">
+                            <div>
+                                <img src="/assets/img/velog_logo.png" alt="velog">
+                            </div>
+                            <p class="title">제목</p>
+                            <p class="date">2021.02.16</p>
+                        </a>
+                    </li> -->
                 </ul>
-                <div class="under-construction">
+                <div class="btn-wrap center">
+                    <a href="https://velog.io/@nooroong" target="_blank" class="btn">View More</a>
+                </div>
+                <!-- <div class="under-construction">
                     <img src="/assets/img/icon_underconstruction.svg" alt="작업중입니다.">
                     <p><span>Under Construction</span><br>작업중입니다.</p>
-                </div>
+                </div> -->
             </div>
         </section>
         <!--#include file="./include/_footer.html"-->
@@ -32,13 +44,13 @@
     <script type="text/javascript">
         $(document).ready(function() {
             $.ajax({
-                url: "https://nooroong.tistory.com/rss",
+                url: "https://nooroong.net/rss",
                 type: "GET",
                 dataType: "xml"
             }).done(function(data) {
-                $("#blog-list").empty();
+                $(".blog-list").empty();
                 $(data).find("channel item").each(function(i) {
-                    if(i==5) return false;
+                    if(i==6) return false;
                     var title = $(this).find("title").text(),
                         link = $(this).find("link").text(),
                         date = new Date($(this).find("pubDate").text()),
@@ -47,7 +59,10 @@
                         imgLength = img.length,
                         imgSrc = img.eq(0).attr("src"),
                         newDate = date.getFullYear() + "." + (date.getMonth() + 1) + "." + date.getDate();
-                    console.log(title,link,desc,date,img,imgLength,imgSrc,newDate);
+                    if(imgLength == 0){
+                        var imgSrc = "/assets/img/velog_logo.png";
+                    }
+                    $(".blog-list").append('<li><a href="' + link + '" target="_blank"><div><img src="' + imgSrc + '" alt="blog post image"></div><p class="title">' + title + '</p><p class="date">' + newDate + '</p></a></li>');
                 })
             }).fail(function() {
                 console.error("블로그 데이터 불러오기에 실패했습니다.")

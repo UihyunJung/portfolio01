@@ -83,7 +83,7 @@ async function images() {
 
 // Optimize Images
 async function optImg() {
-  return src([paths.img.src, "./markup/assets/img/**/*.svg"])
+  return src([paths.img.src, "!./markup/assets/img/**/*.svg"])
     .pipe(imagemin())
     .pipe(dest(paths.img.dest))
 }
