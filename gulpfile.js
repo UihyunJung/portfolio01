@@ -234,7 +234,7 @@ async function updateAssets() {
 // define complex tasks
 const revAll = series(revCss, updateCss, revAssets, updateAssets);
 const web = parallel(fonts, json, images, scss, csscopy, scripts, htmlssi);
-const build = series(clean, web, optImg);
+const build = series(clean, web);
 const buildRev = series(clean, web, revAll);
 
 // export tasks
