@@ -27,6 +27,6 @@ mail($to, '=?UTF-8?B?'.base64_encode($subject).'?=', $formcontent, $mailheader);
 if (!$name){
     echo "<meta http-equiv=\"Content-Type\" content=\"text/html; charset=utf-8\" /><script>alert('메일 발송이 실패하였습니다.');history.go(-1);</script>";
 } else {
-    echo "<script language=\"javascript\" charset=\"utf-8\">alert('메일 발송이 완료 됐습니다. 확인 후 연락 드리겠습니다. 감사합니다.');window.location.href=\"https://nooroong.net/contact.html\";</script>";
+    echo "<script language=\"javascript\" charset=\"utf-8\">alert('메일 발송이 완료 됐습니다. 확인 후 연락 드리겠습니다. 감사합니다.');window.location.href=\"https://nooroong.com/contact.html\";</script>";
 }
 ?>
