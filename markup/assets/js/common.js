@@ -121,7 +121,13 @@ $(document).ready(function(){
         }
     );
 
-    AOS.init();
+    AOS.init({
+        // disable on internet explorer
+        disable:  function msieversion() {
+            return !!(window.navigator.userAgent.indexOf("MSIE ") > 0 || navigator.userAgent.match(
+                /Trident.*rv\:11\./))
+        }
+    });
 });
 
 $(window).on("scroll", function(){
