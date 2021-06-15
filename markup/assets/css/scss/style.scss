@@ -491,6 +491,7 @@ section{
             color:$txt-color;
             margin:rem(20px 0);
             line-height:2em;
+            word-break: keep-all;
         }
     }
 }

@@ -1,5 +1,16 @@
 [
     {
+        "link":"https://www.uplus.co.kr/ent/glob_2/inbo/RinRoamingRentalServiceK.hpi",
+        "img":{
+            "src":"/assets/img/port/port_uplus.jpg",
+            "alt":"LG 유플러스 인바운드 로밍"
+        },
+        "tag":"#pc #mobile",
+        "filter":["pc","mobile"],
+        "title":"LG 유플러스 인바운드로밍 리뉴얼",
+        "term":"2021.03 ~ 2021.05"
+    },
+    {
         "link":"https://play.google.com/store/apps/details?id=com.sktelecom.minit",
         "img":{
             "src":"/assets/img/port/port_tworld_new.jpg",
