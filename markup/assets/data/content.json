@@ -1,261 +1,334 @@
 [
-    {
-        "link":"https://keyin.life",
-        "img":{
-            "src":"/assets/img/work/work_keyin.jpg",
-            "alt":"키인"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"키인 홈페이지 신규 구축",
-        "term":"2021.06 ~ 2021.08"
-    },
-    {
-        "link":"https://www.uplus.co.kr/ent/glob_2/inbo/RinRoamingRentalServiceK.hpi",
-        "img":{
-            "src":"/assets/img/port/port_roaming.jpg",
-            "alt":"LG 유플러스 인바운드 로밍"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"LG 유플러스 인바운드로밍 리뉴얼",
-        "term":"2021.03 ~ 2021.05"
-    },
-    {
-        "link":"https://play.google.com/store/apps/details?id=com.sktelecom.minit",
-        "img":{
-            "src":"/assets/img/port/port_tworld_new.jpg",
-            "alt":"SKT T world"
-        },
-        "tag":"#mobile",
-        "filter":["mobile"],
-        "title":"SKT T world 리뉴얼",
-        "term":"2020.08 ~ 2020.10"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_mitsubishi.jpg",
-            "alt":"미쓰비시 엘리베이터"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","reponse"],
-        "title":"미쓰비시 엘리베이터 리뉴얼",
-        "term":"2020.05 ~ 2020.07"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_point.jpg",
-            "alt":"LG 유플러스 알뜰모바일"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"U+ 알뜰모바일 포인트 보상",
-        "term":"2020.02 ~ 2020.04"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_sinhyup.jpg",
-            "alt":"신업협동조합"
-        },
-        "tag":"#pc",
-        "filter":["pc"],
-        "title":"신협 고객센터 CMS",
-        "term":"2020.01 ~ 2020.02"
-    },
-    {
-        "link":"https://play.google.com/store/apps/details?id=com.medialog.umobi.prepayment.customerservice",
-        "img":{
-            "src":"/assets/img/port/port_ppap.jpg",
-            "alt":"LG 유플러스 알뜰모바일 선불충전앱"
-        },
-        "tag":"#mobile",
-        "filter":["mobile"],
-        "title":"U+ 알뜰모바일 선불충전앱",
-        "term":"2019.10 ~ 2019.12"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_skt.jpg",
-            "alt":"SKT 챗봇 시스템"
-        },
-        "tag":"#pc",
-        "filter":["pc"],
-        "title":"SKT 챗봇 시스템",
-        "term":"2019.08 ~ 2019.09"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_uplus.jpg",
-            "alt":"LG 유플러스 스마트드론"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","response"],
-        "title":"U+ 스마트드론",
-        "term":"2019.07 ~ 2019.08"
-    },
-    {
-        "link":"https://www.purunet-ischool.co.kr/main.ks",
-        "img":{
-            "src":"/assets/img/port/port_ele.jpg",
-            "alt":"푸르넷 아이스쿨"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","response"],
-        "title":"금성출판사 푸르넷 아이스쿨",
-        "term":"2019.04 ~ 2019.06"
-    },
-    {
-        "link":"https://www.purunet-edu.co.kr/main.ks",
-        "img":{
-            "src":"/assets/img/port/port_mid.jpg",
-            "alt":"푸르넷 에듀"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","response"],
-        "title":"금성출판사 푸르넷 에듀",
-        "term":"2019.04 ~ 2019.06"
-    },
-    {
-        "link":"https://play.google.com/store/apps/details?id=Com.sktelecom.minit",
-        "img":{
-            "src":"/assets/img/port/port_tworld.jpg",
-            "alt":"SKT T world"
-        },
-        "tag":"#mobile",
-        "filter":["mobile"],
-        "title":"SKT T world",
-        "term":"2018.12 ~ 2019.04"
-    },
-    {
-        "link":"https://www.supremainc.com/ko/",
-        "img":{
-            "src":"/assets/img/port/port_suprema.jpg",
-            "alt":"슈프리마"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","response"],
-        "title":"슈프리마 홈페이지 구축",
-        "term":"2018.09 ~ 2018.11"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_medialog.jpg",
-            "alt":"미디어로그"
-        },
-        "tag":"#pc #mobile #운영",
-        "filter":["pc","mobile","manage"],
-        "title":"미디어로그 원스토어 운영",
-        "term":"2018.06 ~ 2018.08"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_uplus.jpg",
-            "alt":"LG 유플러스"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"U+ 로밍 리뉴얼",
-        "term":"2018.04 ~ 2018.05"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_teaching.jpg",
-            "alt":"티칭허브"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"금성출판사 티칭허브 리뉴얼",
-        "term":"2018.02 ~ 2018.03"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_keit.jpg",
-            "alt":"한국산업기술평가관리원"
-        },
-        "tag":"#pc #mobile #반응형",
-        "filter":["pc","mobile","response"],
-        "title":"KEIT 홈페이지 리뉴얼",
-        "term":"2017.12 ~ 2018.01"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_lgdisplay.jpg",
-            "alt":"LG 디스플레이"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"LG디스플레이 테크니컬 톡",
-        "term":"2016.03, 2016.09"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_kt.jpg",
-            "alt":"KT 스타오디션"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"KT 스타오디션",
-        "term":"2016.05, 2016.11"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_nuun.jpg",
-            "alt":"nuun 코리아"
-        },
-        "tag":"#wordpress",
-        "filter":["pc","mobile"],
-        "title":"nuun 코리아 홈페이지",
-        "term":"2016.04"
-    },
-    {
-        "link":"http://www.hlsc.co.kr/",
-        "img":{
-            "src":"/assets/img/port/port_highland.jpg",
-            "alt":"하이랜드 스포츠"
-        },
-        "tag":"#기획",
-        "filter":["plan"],
-        "title":"하이랜드 스포츠 홈페이지 기획",
-        "term":"2016.02"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_eugene.jpg",
-            "alt":"유진투자증권"
-        },
-        "tag":"#pc #mobile",
-        "filter":["pc","mobile"],
-        "title":"유진투자증권 이벤트페이지",
-        "term":"2016.01 ~ 2016.12"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_ybuy.jpg",
-            "alt":"와이바이"
-        },
-        "tag":"#기획 #운영",
-        "filter":["plan","manage"],
-        "title":"드론쇼핑몰 와이바이 기획, 운영",
-        "term":"2016.12 ~ 2017.01"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_odmate.jpg",
-            "alt":"오디메이트"
-        },
-        "tag":"#기획",
-        "filter":["plan"],
-        "title":"아웃도어 중고거래 플랫폼 오디메이트",
-        "term":"2015.08 ~ 2016.01"
-    },
-    {
-        "img":{
-            "src":"/assets/img/port/port_revu.jpg",
-            "alt":"레뷰"
-        },
-        "tag":"#기획 #운영",
-        "filter":["plan","manage"],
-        "title":"메타블로그 서비스 레뷰 기획, 운영",
-        "term":"2008.02 ~ 2010.08"
-    }
+	{
+		"img": {
+			"src": "/assets/img/port/port_nh.jpg",
+			"alt": "농협은행"
+		},
+		"tag": "#pc",
+		"filter": ["pc"],
+		"title": "농협은행 상품판매 녹취 관리 시스템 개편",
+		"term": "2023.06 ~ 2023.09"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_kiwoom.jpg",
+			"alt": "키움증권"
+		},
+		"tag": "#pc",
+		"filter": ["pc"],
+		"title": "키움증권 상담사 주식거래 시스템 클로버 개편",
+		"term": "2023.03 ~ 2023.05"
+	},
+	{
+		"link": "https://www.hanafn.com/",
+		"img": {
+			"src": "/assets/img/work/work_hana.jpg",
+			"alt": "하나금융그룹"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "하나금융그룹 홉페이지 리뉴얼",
+		"term": "2022.08 ~ 2023.02"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_mettit.jpg",
+			"alt": "멧잇"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "메타버스 크리에이터 플랫폼 멧잇 구축",
+		"term": "2022.01 ~ 2022.05"
+	},
+	{
+		"link": "https://dauning.com/",
+		"img": {
+			"src": "/assets/img/port/port_dauning.jpg",
+			"alt": "다우닝"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "다우닝 쇼핑몰 리뉴얼",
+		"term": "2021.10 ~ 2022.01"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_samsung.jpg",
+			"alt": "삼성엔지니어링"
+		},
+		"tag": "#pc",
+		"filter": ["pc"],
+		"title": "삼성엔지니어링 EDP, ITB 구축",
+		"term": "2021.08 ~ 2022.01"
+	},
+	{
+		"link": "http://gleline.com/",
+		"img": {
+			"src": "/assets/img/port/port_gleline.jpg",
+			"alt": "글라인"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "크리에이터 집단 글라인 홈페이지 신규 구축",
+		"term": "2021.09 ~ 2021.11"
+	},
+	{
+		"link": "https://keyin.life",
+		"img": {
+			"src": "/assets/img/work/work_keyin.jpg",
+			"alt": "키인"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "키인 홈페이지 신규 구축",
+		"term": "2021.06 ~ 2021.08"
+	},
+	{
+		"link": "https://www.uplus.co.kr/ent/glob_2/inbo/RinRoamingRentalServiceK.hpi",
+		"img": {
+			"src": "/assets/img/port/port_roaming.jpg",
+			"alt": "LG 유플러스 인바운드 로밍"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "LG 유플러스 인바운드로밍 리뉴얼",
+		"term": "2021.03 ~ 2021.05"
+	},
+	{
+		"link": "https://play.google.com/store/apps/details?id=com.sktelecom.minit",
+		"img": {
+			"src": "/assets/img/port/port_tworld_new.jpg",
+			"alt": "SKT T world"
+		},
+		"tag": "#mobile",
+		"filter": ["mobile"],
+		"title": "SKT T world 리뉴얼",
+		"term": "2020.08 ~ 2020.10"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_mitsubishi.jpg",
+			"alt": "미쓰비시 엘리베이터"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "reponse"],
+		"title": "미쓰비시 엘리베이터 리뉴얼",
+		"term": "2020.05 ~ 2020.07"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_point.jpg",
+			"alt": "LG 유플러스 알뜰모바일"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "U+ 알뜰모바일 포인트 보상",
+		"term": "2020.02 ~ 2020.04"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_sinhyup.jpg",
+			"alt": "신업협동조합"
+		},
+		"tag": "#pc",
+		"filter": ["pc"],
+		"title": "신협 고객센터 CMS",
+		"term": "2020.01 ~ 2020.02"
+	},
+	{
+		"link": "https://play.google.com/store/apps/details?id=com.medialog.umobi.prepayment.customerservice",
+		"img": {
+			"src": "/assets/img/port/port_ppap.jpg",
+			"alt": "LG 유플러스 알뜰모바일 선불충전앱"
+		},
+		"tag": "#mobile",
+		"filter": ["mobile"],
+		"title": "U+ 알뜰모바일 선불충전앱",
+		"term": "2019.10 ~ 2019.12"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_skt.jpg",
+			"alt": "SKT 챗봇 시스템"
+		},
+		"tag": "#pc",
+		"filter": ["pc"],
+		"title": "SKT 챗봇 시스템",
+		"term": "2019.08 ~ 2019.09"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_uplus.jpg",
+			"alt": "LG 유플러스 스마트드론"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "U+ 스마트드론",
+		"term": "2019.07 ~ 2019.08"
+	},
+	{
+		"link": "https://www.purunet-ischool.co.kr/main.ks",
+		"img": {
+			"src": "/assets/img/port/port_ele.jpg",
+			"alt": "푸르넷 아이스쿨"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "금성출판사 푸르넷 아이스쿨",
+		"term": "2019.04 ~ 2019.06"
+	},
+	{
+		"link": "https://www.purunet-edu.co.kr/main.ks",
+		"img": {
+			"src": "/assets/img/port/port_mid.jpg",
+			"alt": "푸르넷 에듀"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "금성출판사 푸르넷 에듀",
+		"term": "2019.04 ~ 2019.06"
+	},
+	{
+		"link": "https://play.google.com/store/apps/details?id=Com.sktelecom.minit",
+		"img": {
+			"src": "/assets/img/port/port_tworld.jpg",
+			"alt": "SKT T world"
+		},
+		"tag": "#mobile",
+		"filter": ["mobile"],
+		"title": "SKT T world",
+		"term": "2018.12 ~ 2019.04"
+	},
+	{
+		"link": "https://www.supremainc.com/ko/",
+		"img": {
+			"src": "/assets/img/port/port_suprema.jpg",
+			"alt": "슈프리마"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "슈프리마 홈페이지 구축",
+		"term": "2018.09 ~ 2018.11"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_medialog.jpg",
+			"alt": "미디어로그"
+		},
+		"tag": "#pc #mobile #운영",
+		"filter": ["pc", "mobile", "manage"],
+		"title": "미디어로그 원스토어 운영",
+		"term": "2018.06 ~ 2018.08"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_uplus.jpg",
+			"alt": "LG 유플러스"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "U+ 로밍 리뉴얼",
+		"term": "2018.04 ~ 2018.05"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_teaching.jpg",
+			"alt": "티칭허브"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "금성출판사 티칭허브 리뉴얼",
+		"term": "2018.02 ~ 2018.03"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_keit.jpg",
+			"alt": "한국산업기술평가관리원"
+		},
+		"tag": "#pc #mobile #반응형",
+		"filter": ["pc", "mobile", "response"],
+		"title": "KEIT 홈페이지 리뉴얼",
+		"term": "2017.12 ~ 2018.01"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_lgdisplay.jpg",
+			"alt": "LG 디스플레이"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "LG디스플레이 테크니컬 톡",
+		"term": "2016.03, 2016.09"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_kt.jpg",
+			"alt": "KT 스타오디션"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "KT 스타오디션",
+		"term": "2016.05, 2016.11"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_nuun.jpg",
+			"alt": "nuun 코리아"
+		},
+		"tag": "#wordpress",
+		"filter": ["pc", "mobile"],
+		"title": "nuun 코리아 홈페이지",
+		"term": "2016.04"
+	},
+	{
+		"link": "http://www.hlsc.co.kr/",
+		"img": {
+			"src": "/assets/img/port/port_highland.jpg",
+			"alt": "하이랜드 스포츠"
+		},
+		"tag": "#기획",
+		"filter": ["plan"],
+		"title": "하이랜드 스포츠 홈페이지 기획",
+		"term": "2016.02"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_eugene.jpg",
+			"alt": "유진투자증권"
+		},
+		"tag": "#pc #mobile",
+		"filter": ["pc", "mobile"],
+		"title": "유진투자증권 이벤트페이지",
+		"term": "2016.01 ~ 2016.12"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_ybuy.jpg",
+			"alt": "와이바이"
+		},
+		"tag": "#기획 #운영",
+		"filter": ["plan", "manage"],
+		"title": "드론쇼핑몰 와이바이 기획, 운영",
+		"term": "2016.12 ~ 2017.01"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_odmate.jpg",
+			"alt": "오디메이트"
+		},
+		"tag": "#기획",
+		"filter": ["plan"],
+		"title": "아웃도어 중고거래 플랫폼 오디메이트",
+		"term": "2015.08 ~ 2016.01"
+	},
+	{
+		"img": {
+			"src": "/assets/img/port/port_revu.jpg",
+			"alt": "레뷰"
+		},
+		"tag": "#기획 #운영",
+		"filter": ["plan", "manage"],
+		"title": "메타블로그 서비스 레뷰 기획, 운영",
+		"term": "2008.02 ~ 2010.08"
+	}
 ]
